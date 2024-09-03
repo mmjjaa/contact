@@ -1,0 +1,36 @@
+main {
+  max-width: 1200px;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  position: relative;
+}
+
+.header {
+  padding: 3rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.Con {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.inputArea,
+.listArea {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .Con {
+    flex-direction: column;
+  }
+
+  .listArea {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+}

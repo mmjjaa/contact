@@ -1,0 +1,17 @@
+.list {
+  padding: 1rem;
+  display: flex;
+  white-space: nowrap;
+  border-bottom: 1px solid lightgray;
+}
+.list p {
+  margin: 0 10px;
+  font-weight: bold;
+}
+.detailBtn {
+  margin-left: 100px;
+}
+.detailBtn:hover,
+.deleteBtn:hover {
+  background-color: rgb(196, 196, 196);
+}
