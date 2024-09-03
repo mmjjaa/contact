@@ -1,5 +1,5 @@
 import "./search.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Search({ lists, setList }) {
   const [inputText, setInputText] = useState("");
@@ -7,6 +7,13 @@ export default function Search({ lists, setList }) {
   const inputItem = (e) => {
     setInputText(e.target.value);
   };
+
+  useEffect(() => {
+    if (inputText === "") {
+      showAllLists();
+    }
+  }, [inputText]);
+
   const handleKeyUp = (e) => {
     if (e.key === "Enter") {
       const filteredLists = lists.filter(

@@ -90,8 +90,8 @@ export default function Input({ lists, setList }) {
           onChange={handleNameChange}
           placeholder="이름"
         />
-        {nameError && <p className="error">{nameError}</p>}
-      </div>
+      </div>{" "}
+      {nameError && <div className="error">{nameError}</div>}
       <div className="inputText">
         <label className="label"> 전화번호 </label>
 
@@ -101,8 +101,12 @@ export default function Input({ lists, setList }) {
           onChange={handlePhoneChange}
           placeholder="전화번호"
         />
-        {phoneError && <p className="error">{phoneError}</p>}
       </div>
+      {phoneError && (
+        <div className="error">
+          <p>{phoneError}</p>
+        </div>
+      )}
       <div className="inputText">
         <label className="label"> 그룹</label>
 
